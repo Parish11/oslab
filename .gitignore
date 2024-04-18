@@ -1,0 +1,51 @@
+Extra/
+*.exe
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+1Threads
+2FCFS
+3SRTF
+4RoundRobbin
+5SJF
+6PriorityScheduling
+7Fork
+8Bankers
+9Dekkers
+10ReaderWriter
+11OptimalPageReplacement
+12LRU
+13FIFOPageReplacement
+0Try
+0Try.cpp
