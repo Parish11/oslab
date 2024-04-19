@@ -5,36 +5,42 @@ void IMP();
 int allocation[10][3], need[10][3], Max[10][3], available[10][3];
 int p, current[3];
 bool executed[10], come;
+
+// Number of Resources = 3
+
 int main()
 {
     int keepon = 1;
+    // Enter the number of processes
     cout << "Enter No. of processes: ";
     cin >> p;
     cout << "\n";
+    // Enter the available number of processes
     cout << "Enter the current resources: ";
     cin >> current[0] >> current[1] >> current[2];
     for (int i = 0; i < p; ++i)
     {
         cout << "\n\n\t\t\tProcess P" << i + 1 << " Details\n";
+        // Fill the allocation matrix
         cout << "Enter Allocation : ";
 
         cin >> allocation[i][0] >> allocation[i][1] >> allocation[i][2];
+        // Fill the Maximum Need Matrix
         cout << "Enter Max :";
         cin >> Max[i][0] >> Max[i][1] >> Max[i][2];
-        need[i][0] = Max[i][0] -
-                     allocation[i][0];
-        need[i][1] = Max[i][1] -
-                     allocation[i][1];
+        need[i][0] = Max[i][0] - allocation[i][0];
+        need[i][1] = Max[i][1] - allocation[i][1];
         need[i][2] = Max[i][2] - allocation[i][2];
     }
+    // Printing the Table
     cout << "\n\n\t\t\tTable for Bankers Algo\n\n";
     cout << "Initial Resources: " << current[0] << " " << current[1] << " " << current[2] << "\n\n";
-    cout << "Process Max Allocation Need\n";
+    cout << "Process\t Max\t Allocation\t Need\n";
     for (int i = 0; i < p; ++i)
     {
-        cout << " P" << i + 1 << " ";
-        cout << " " << Max[i][0] << " " << Max[i][1] << " " << Max[i][2] << " ";
-        cout << " " << allocation[i][0] << " " << allocation[i][1] << " " << allocation[i][2] << " ";
+        cout << " P" << i + 1 << " \t";
+        cout << " " << Max[i][0] << " " << Max[i][1] << " " << Max[i][2] << " \t";
+        cout << " " << allocation[i][0] << " " << allocation[i][1] << " " << allocation[i][2] << "\t\t";
         cout << " " << need[i][0] << " " << need[i][1] << " " << need[i][2];
         cout << "\n";
     }
